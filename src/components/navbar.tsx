@@ -1,12 +1,14 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 type Props = {
   type: "fixed" | "scrollable";
   blur: boolean;
   children?: any;
+  className?: string;
 };
 
-export default function Navbar({ type, blur, children }: Props) {
+export default function Navbar({ type, blur, children, className }: Props) {
   let position = "";
   switch (type) {
     case "fixed":
@@ -17,14 +19,20 @@ export default function Navbar({ type, blur, children }: Props) {
       position = "";
       break;
   }
-  if (blur)
-    return (
-      <div
-        className={`bg-background-color w-full
+  return (
+    <div
+      className={twMerge(
+        ` w-full
         ${position}
-        ${blur && "backdrop-blur-md bg-background-color/70"} `}
-      >
-        {children}
-      </div>
-    );
+        ${
+          blur
+            ? "backdrop-blur-md bg-background-color/70"
+            : "bg-background-color"
+        }`,
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
 }

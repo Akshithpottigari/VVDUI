@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import ReactDom from "react-dom";
+import { twMerge } from "tailwind-merge";
 
 interface SidebarProps {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   children: string | JSX.Element | JSX.Element[];
+  className?: string;
 }
 
-export function Sidebar({ open, setOpen, children }: SidebarProps) {
+export function Sidebar({ open, setOpen, children, className }: SidebarProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   const closeDrawer = () => {
@@ -33,7 +35,10 @@ export function Sidebar({ open, setOpen, children }: SidebarProps) {
         visibility: isVisible ? "visible" : "hidden",
       }}
       onClick={closeDrawer}
-      className="fixed left-0 top-0 z-50 flex h-[100dvh] w-screen items-start justify-start bg-gray-200/50 backdrop-blur-md transition-all duration-500"
+      className={twMerge(
+        "fixed left-0 top-0 z-50 flex h-[100dvh] w-screen items-start justify-start bg-gray-200/50 backdrop-blur-md transition-all duration-500",
+        className
+      )}
     >
       <div
         onClick={(e) => e.stopPropagation()}
@@ -45,6 +50,6 @@ export function Sidebar({ open, setOpen, children }: SidebarProps) {
         {children}
       </div>
     </div>,
-    document.getElementById("drawer") as HTMLElement
+    document.getElementById("sidebar") as HTMLElement
   );
 }

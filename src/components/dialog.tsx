@@ -46,6 +46,6 @@ export default function Dialog({ active, setActive, children }: Props) {
         {children}
       </div>
     </div>,
-    document.getElementById("modal") as HTMLElement
+    document.getElementById("dialog") as HTMLElement
   );
 }

@@ -1,9 +1,10 @@
 import React from "react";
-
+import { twMerge } from "tailwind-merge";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
   variant?: "primary" | "secondary" | "ghost" | "outline"; // Define your variants here
   children?: any;
+  className?: string;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -28,7 +29,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Comp
         {...props}
         ref={ref}
-        className={`w-fit rounded-lg backdrop-blur-3xl cursor-pointer px-3 py-1.5 text-sm font-bold duration-500 ${variantClass}`}
+        className={twMerge(
+          `w-fit rounded-lg backdrop-blur-3xl cursor-pointer px-3 py-1.5 text-sm font-bold duration-500 ${variantClass}`,
+          className
+        )}
       >
         {children}
       </Comp>

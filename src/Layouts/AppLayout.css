@@ -1,0 +1,6 @@
+.navbar-logo:hover {
+  filter: drop-shadow(0 1px 8px #22d3ee);
+  fill: #3b82f6;
+  stroke: #22d3ee;
+  transition-duration: 500ms;
+}
