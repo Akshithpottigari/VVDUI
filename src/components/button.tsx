@@ -1,13 +1,13 @@
 import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
   asChild?: boolean;
   variant?: "primary" | "secondary" | "ghost" | "outline"; // Define your variants here
+  children?: any;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, text, variant, asChild = false, ...props }, ref) => {
+  ({ className, variant, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? "span" : "button";
     let variantClass = "";
     switch (variant) {
@@ -30,7 +30,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         className={`w-fit rounded-lg backdrop-blur-3xl cursor-pointer px-3 py-1.5 text-sm font-bold duration-500 ${variantClass}`}
       >
-        {text}
+        {children}
       </Comp>
     );
   }
