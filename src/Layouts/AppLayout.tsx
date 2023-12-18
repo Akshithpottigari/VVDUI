@@ -149,9 +149,11 @@ function AppLayout({}: Props) {
           </div>
         </div>
       </aside>
-      <div className="mt-14 min-h-[dvh] w-[dvw] mx-auto bg-background-color md:ml-[300px]  px-4 py-2 ">
+      <div className="mt-14 min-h-[dvh] flex items-center  mx-auto bg-background-color md:ml-[300px]  px-4 py-2 ">
         {/* h-[calc(100vh-56px)] */}
-        <Outlet />
+        <div className="max-w-6xl">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

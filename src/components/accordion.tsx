@@ -18,17 +18,19 @@ export default function Accordion({ question, answer }: Props) {
   }, [showContent]);
 
   return (
-    <div className="w-[500px] rounded-md border text-text-color border-border-color">
+    <div className="w-full rounded-md border text-text-color border-border-color">
       <button
         role="button"
         aria-expanded={showContent}
-        style={{ borderBottom: showContent ? "var(--border) solid 2px" : "0px" }}
+        style={{
+          borderBottom: showContent ? "var(--border) solid 2px" : "0px",
+        }}
         className="flex w-full items-center justify-between rounded-[5px] border-border-color bg-none p-5 font-bold"
         onClick={() => {
           setShowContent(!showContent);
         }}
       >
-        {question}
+        <span className="text-left">{question}</span>
         <ChevronDown
           style={{ transform: `rotate(${showContent ? "180deg" : "0"})` }}
           className="ml-4 min-h-[24px] min-w-[24px] transition-transform ease-in-out duration-500"
@@ -37,7 +39,7 @@ export default function Accordion({ question, answer }: Props) {
       <div
         ref={contentRef}
         style={{ height: showContent ? `${contentHeight}` : "0" }}
-        className="overflow-hidden rounded-[5px] bg-none font-bold transition-[height] ease-in-out duration-500"
+        className="overflow-hidden rounded-[5px] font-normal bg-none transition-[height] ease-in-out duration-500"
       >
         <p className="p-5">{answer}</p>
       </div>
