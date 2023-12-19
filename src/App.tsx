@@ -1,5 +1,3 @@
-import { useState } from "react";
-import VVDUILogo from "./assets/VVDUI.svg";
 import "./App.css";
 
 import {
@@ -20,32 +18,17 @@ import Checkbox from "./pages/Checkbox";
 import Dialog from "./pages/Dialog";
 import Dropdown from "./pages/Dropdown";
 import Input from "./pages/Input";
-import Navbar from "./pages/Navbar";
-import Select from "./pages/Select";
 import Sidebar from "./pages/Sidebar";
 import Tabs from "./pages/Tabs";
 import TextArea from "./pages/TextArea";
 import Tooltip from "./pages/Tooltip";
-import Aboutme from "./pages/Aboutme";
 import GetStarted from "./pages/GetStarted";
 import ErrorPage from "./pages/ErrorPage";
 import ButtonPage from "./pages/ButtonPage";
 import SelectPage from "./pages/Select";
+import NavbarPage from "./pages/Navbar";
 
 function App() {
-  const code = `import React, { useEffect } from "react";
-  import Prism from "prismjs";
-  import "prismjs/themes/prism-tomorrow.css";
-  import "./styles.css";`;
-
-  const [openSideBar, setOpenSideBar] = useState(false);
-  const [openDialog, setOpenDialog] = useState(false);
-  const [activeTab, setActiveTab] = useState("1");
-  const tabs = [
-    { key: "1", content: "Tab1" },
-    { key: "2", content: "Tab2" },
-    { key: "3", content: "Tab3" },
-  ];
   const Router = createBrowserRouter(
     createRoutesFromElements(
       <>
@@ -62,7 +45,7 @@ function App() {
           <Route path={ROUTE_PATHS.DIALOG} element={<Dialog />} />
           <Route path={ROUTE_PATHS.DROPDOWN} element={<Dropdown />} />
           <Route path={ROUTE_PATHS.INPUT} element={<Input />} />
-          <Route path={ROUTE_PATHS.NAVBAR} element={<Navbar />} />
+          <Route path={ROUTE_PATHS.NAVBAR} element={<NavbarPage />} />
           <Route path={ROUTE_PATHS.SELECT} element={<SelectPage />} />
           <Route path={ROUTE_PATHS.SIDEBAR} element={<Sidebar />} />
           <Route path={ROUTE_PATHS.TABS} element={<Tabs />} />

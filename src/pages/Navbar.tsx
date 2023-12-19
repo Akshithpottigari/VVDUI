@@ -8,7 +8,7 @@ type Props = {};
 
 function NavbarPage({}: Props) {
   return (
-    <div className="text-text-color w-full flex flex-col justify-center font-normal text-md space-y-6 p-4">
+    <div className="text-text-color max-w-6xl w-full flex flex-col justify-center font-normal text-md space-y-6 p-4">
       <div className="text-3xl font-semibold">Navbar</div>
       <div className="text-sm">
         A navbar typically contains links or navigation items, providing users
@@ -23,9 +23,11 @@ function NavbarPage({}: Props) {
           </div>
         </Navbar>
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.navbar} language="js" />
     </div>
   );
+  // return <div className="bg-black h-1"></div>;
 }
 
 export default NavbarPage;

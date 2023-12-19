@@ -28,6 +28,7 @@ function CardPage({}: Props) {
           </div>
         </Card>
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.card} language="js" />
     </div>
   );

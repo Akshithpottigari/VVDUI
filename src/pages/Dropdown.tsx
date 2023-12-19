@@ -20,6 +20,7 @@ function DropdownPage({}: Props) {
           items={["Immediate", "Daily Summary", "Weekly Digest"]}
         />
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.dropdown} language="js" />
     </div>
   );

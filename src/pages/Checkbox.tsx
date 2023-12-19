@@ -21,6 +21,7 @@ function CheckboxPage({}: Props) {
           <Checkbox text="Attend team meeting" />
         </div>
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.checkbox} language="js" />
     </div>
   );

@@ -17,6 +17,7 @@ function AlertPage({}: Props) {
       <div className="border-border-color w-full  flex justify-center border rounded-lg p-4">
         <Alert message="Please note that the event starts at 7:00 PM." />
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.alert} language="js" />
     </div>
   );

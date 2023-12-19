@@ -55,61 +55,63 @@ function AppLayout({}: Props) {
           <VVDUILogo className="w-4 h-4 shadow-lg" />
           <div className="">VVDUI</div>
         </Link>
-        <Button
-          variant="outline"
-          onClick={() => setIsDrawerActive(true)}
-          className="md:hidden"
-        >
-          <Menu className="w-4 h-4" />
-        </Button>
-        <Sidebar open={isDrawerActive} setOpen={setIsDrawerActive}>
-          <div className="text-text-color h-full w-full overflow-y-scroll space-y-5">
-            <div className="flex flex-row items-center mb-4 gap-3 text-xl">
-              <VVDUILogo className="w-4 h-4" />
-              {/* <img src={VVDUILogo} className="w-4 h-4" alt="logo" /> */}
-              VVDUI
-            </div>
+        <div className="flex flex-row gap-3 items-center">
+          <Button
+            variant="outline"
+            onClick={() => setIsDrawerActive(true)}
+            className="md:hidden"
+          >
+            <Menu className="w-4 h-4" />
+          </Button>
+          <Sidebar open={isDrawerActive} setOpen={setIsDrawerActive}>
+            <div className="text-text-color h-full w-full overflow-y-scroll space-y-5">
+              <div className="flex flex-row items-center mb-4 gap-3 text-xl">
+                <VVDUILogo className="w-4 h-4" />
+                {/* <img src={VVDUILogo} className="w-4 h-4" alt="logo" /> */}
+                VVDUI
+              </div>
 
-            <div className="font-normal flex flex-col gap-3">
-              <div className="font-semibold">Explore</div>
-              <div
-                onClick={() => handleLinkClick(ROUTE_PATHS.HOME)}
-                className="cursor-pointer"
-              >
-                Home
-              </div>
-              <div
-                onClick={() => handleLinkClick(ROUTE_PATHS.GET_STARTED)}
-                className="cursor-pointer"
-              >
-                Get Started
-              </div>
-              {/* <div
+              <div className="font-normal flex flex-col gap-3">
+                <div className="font-semibold">Explore</div>
+                <div
+                  onClick={() => handleLinkClick(ROUTE_PATHS.HOME)}
+                  className="cursor-pointer"
+                >
+                  Home
+                </div>
+                <div
+                  onClick={() => handleLinkClick(ROUTE_PATHS.GET_STARTED)}
+                  className="cursor-pointer"
+                >
+                  Get Started
+                </div>
+                {/* <div
                 onClick={() => handleLinkClick(ROUTE_PATHS.ABOUT_ME)}
                 className="cursor-pointer"
               >
                 About Me
               </div> */}
-            </div>
-            <div className="">
-              <div className="font-semibold">Components</div>
-              <div className="flex mt-3 flex-col gap-3">
-                {links.map((link, index) => (
-                  <div
-                    key={index}
-                    onClick={() => handleLinkClick(link.link)}
-                    className="font-normal cursor-pointer duration-500"
-                  >
-                    {link.name}
-                  </div>
-                ))}
+              </div>
+              <div className="">
+                <div className="font-semibold">Components</div>
+                <div className="flex mt-3 flex-col gap-3">
+                  {links.map((link, index) => (
+                    <div
+                      key={index}
+                      onClick={() => handleLinkClick(link.link)}
+                      className="font-normal cursor-pointer duration-500"
+                    >
+                      {link.name}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </Sidebar>
-        <a href="https://github.com/Akshithpottigari/VVDUI">
-          <Github className="w-6 h-6 fill-none cursor-pointer hover:stroke-primary duration-500" />
-        </a>
+          </Sidebar>
+          <a href="https://github.com/Akshithpottigari/VVDUI">
+            <Github className="w-6 h-6 fill-none cursor-pointer hover:stroke-primary duration-500" />
+          </a>
+        </div>
       </Navbar>
       <aside className="hidden bg-background-color p-4 md:block scrollbar w-[300px] fixed top-16 h-full">
         <div className="text-text-color h-full w-full overflow-y-scroll space-y-5">
@@ -150,11 +152,11 @@ function AppLayout({}: Props) {
           </div>
         </div>
       </aside>
-      <div className="mt-14 min-h-[dvh] flex items-center  mx-auto bg-background-color md:ml-[300px]  px-4 py-2 ">
+      <div className="mt-14 min-h-[dvh] md:min-w-[100vw-300px] flex items-center  mx-auto bg-background-color md:ml-[300px]  px-4 py-2 ">
         {/* h-[calc(100vh-56px)] */}
-        <div className="max-w-6xl">
-          <Outlet />
-        </div>
+        {/* <div className=""> */}
+        <Outlet />
+        {/* </div> */}
       </div>
     </div>
   );

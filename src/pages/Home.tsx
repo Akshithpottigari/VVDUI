@@ -4,7 +4,7 @@ type Props = {};
 
 export default function Home({}: Props) {
   return (
-    <div className="text-text-color font-normal text-md space-y-6 p-4">
+    <div className="text-text-color max-w-6xl font-normal text-md space-y-6 p-4">
       <div className="text-3xl font-semibold">Introduction</div>
       <div className="">
         <span className="font-semibold">VVDUI (Vivid UI)</span> is a collection

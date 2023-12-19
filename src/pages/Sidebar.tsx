@@ -43,6 +43,7 @@ function SidebarPage({}: Props) {
         sidebar rendering, like below:
         <Code code={`<div id="sidebar"></div>`} language="html" />
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.sidebar} language="js" />
     </div>
   );

@@ -43,6 +43,7 @@ function AccordionPage({}: Props) {
         </div>
       </div>
       {/* using utils get code function, keep below */}
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.accordion} language="js" />
     </div>
   );

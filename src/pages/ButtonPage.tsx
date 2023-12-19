@@ -14,9 +14,13 @@ function ButtonPage({}: Props) {
         user interactions.
       </div>
       <div className="text-xl font-bold">Example</div>
-      <div className="border-border-color w-full  flex justify-center border rounded-lg p-4">
-        <Button>Button</Button>
+      <div className="border-border-color gap-3 w-full  flex justify-center border rounded-lg p-4">
+        <Button>Primary</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="outline">Outline</Button>
+        <Button variant="ghost">Ghost</Button>
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.button} language="js" />
     </div>
   );

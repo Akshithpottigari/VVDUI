@@ -14,6 +14,7 @@ function InputPage({}: Props) {
       <div className="border-border-color w-full  flex justify-center border rounded-lg p-4">
         <Input variant="primary" placeholder="Username" />
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.input} language="js" />
     </div>
   );

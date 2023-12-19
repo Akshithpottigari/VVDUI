@@ -17,6 +17,7 @@ function AvatarPage({}: Props) {
       <div className="border-border-color w-full  flex justify-center border rounded-lg p-4">
         <Avatar imageLink="https://cdn.pixabay.com/photo/2018/04/27/03/50/portrait-3353699_1280.jpg" />
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.avatar} language="js" />
     </div>
   );

@@ -35,6 +35,7 @@ function DialogPage({}: Props) {
         dialog rendering, like below:
         <Code code={`<div id="dialog"></div>`} language="html" />
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.dialog} language="js" />
     </div>
   );

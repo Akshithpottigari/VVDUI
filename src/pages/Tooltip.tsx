@@ -26,6 +26,7 @@ function TooltipPage({}: Props) {
           }
         />
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.tooltip} language="js" />
     </div>
   );

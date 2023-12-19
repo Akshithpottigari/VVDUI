@@ -10,7 +10,7 @@ function GetStarted({}: Props) {
     Prism.highlightAll();
   }, []);
   return (
-    <div className="text-text-color  w-full font-normal text-md space-y-6 p-4">
+    <div className="text-text-color max-w-6xl font-normal text-md space-y-6 p-4">
       {/* GetStarted 1. tailwind, follow insttructions for the framework from
       official docs 1. install lucide icons, or any other icon pack 2. install
       tailwind-merge npm package 3. tailwind config */}

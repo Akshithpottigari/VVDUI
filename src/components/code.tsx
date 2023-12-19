@@ -34,8 +34,8 @@ export default function Code({
     Prism.highlightAll();
   }, []);
   return (
-    <div className="w-full">
-      <pre className="">
+    <div className="md:w-[100vw-300px]">
+      <pre className="md:w-[100vw-300px]">
         <code data-prismjs-copy="Copy" className={`language-${language} `}>
           {code}
         </code>

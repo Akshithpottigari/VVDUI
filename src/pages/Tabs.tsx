@@ -27,6 +27,7 @@ function TabsPage({}: Props) {
           setActiveTab={setActiveTab}
         />
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.tabs} language="js" />
     </div>
   );

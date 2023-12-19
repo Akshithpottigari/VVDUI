@@ -18,6 +18,7 @@ function SelectPage({}: Props) {
       <div className="border-border-color w-full  flex justify-center border rounded-lg p-4">
         <Select items={["Financial", "Marketing", "Human Resources"]} />
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.select} language="js" />
     </div>
   );

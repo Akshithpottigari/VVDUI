@@ -17,6 +17,7 @@ function TextAreaPage({}: Props) {
       <div className="border-border-color w-full  flex justify-center border rounded-lg p-4">
         <TextArea placeholder="Write here..." />
       </div>
+      <div className="text-xl font-bold">Component Code Snippet</div>
       <Code code={COMPONENTS.textarea} language="js" />
     </div>
   );
