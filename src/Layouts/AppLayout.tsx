@@ -113,7 +113,7 @@ function AppLayout({}: Props) {
           </a>
         </div>
       </Navbar>
-      <aside className="hidden bg-background-color p-4 md:block scrollbar w-[300px] fixed top-16 h-full">
+      <aside className="hidden h-[calc(100svh-56px)] max-h-[calc(100svh-56px)] bg-background-color p-4 md:block scrollbar w-[300px] fixed top-16">
         <div className="text-text-color h-full w-full overflow-y-scroll space-y-5">
           <div className="font-normal flex flex-col gap-3">
             <div className="font-semibold">Explore</div>
