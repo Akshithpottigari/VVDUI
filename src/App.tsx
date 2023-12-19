@@ -29,6 +29,8 @@ import Tooltip from "./pages/Tooltip";
 import Aboutme from "./pages/Aboutme";
 import GetStarted from "./pages/GetStarted";
 import ErrorPage from "./pages/ErrorPage";
+import ButtonPage from "./pages/ButtonPage";
+import SelectPage from "./pages/Select";
 
 function App() {
   const code = `import React, { useEffect } from "react";
@@ -54,13 +56,14 @@ function App() {
           <Route path={ROUTE_PATHS.ALERT} element={<Alert />} />
           <Route path={ROUTE_PATHS.AVATAR} element={<Avatar />} />
           <Route path={ROUTE_PATHS.BADGE} element={<Badge />} />
+          <Route path={ROUTE_PATHS.BUTTON} element={<ButtonPage />} />
           <Route path={ROUTE_PATHS.CARD} element={<Card />} />
           <Route path={ROUTE_PATHS.CHECKBOX} element={<Checkbox />} />
           <Route path={ROUTE_PATHS.DIALOG} element={<Dialog />} />
           <Route path={ROUTE_PATHS.DROPDOWN} element={<Dropdown />} />
           <Route path={ROUTE_PATHS.INPUT} element={<Input />} />
           <Route path={ROUTE_PATHS.NAVBAR} element={<Navbar />} />
-          <Route path={ROUTE_PATHS.SELECT} element={<Select />} />
+          <Route path={ROUTE_PATHS.SELECT} element={<SelectPage />} />
           <Route path={ROUTE_PATHS.SIDEBAR} element={<Sidebar />} />
           <Route path={ROUTE_PATHS.TABS} element={<Tabs />} />
           <Route path={ROUTE_PATHS.TEXTAREA} element={<TextArea />} />

@@ -30,14 +30,14 @@ export default function Dialog({ active, setActive, children }: Props) {
     <div
       role="dialog"
       aria-modal="true"
-      className="z-10 fixed left-0 top-0 backdrop-blur-md  flex h-screen w-screen items-center justify-center"
+      className="z-10 fixed bg-background-color/70 left-0 top-0 backdrop-blur-md  flex h-screen w-screen items-center justify-center"
     >
       <div
         style={{
           opacity: isVisible ? "1" : "0",
           visibility: isVisible ? "visible" : "hidden",
         }}
-        className="relative flex w-[350px] flex-col items-center justify-center rounded-md border border-border-color bg-background p-6 font-bold transition-all duration-500 "
+        className="relative bg-background-color flex w-[350px] flex-col items-center justify-center rounded-md border border-border-color bg-background p-6 font-bold transition-all duration-500 "
       >
 
         <button onClick={closeDialog}>

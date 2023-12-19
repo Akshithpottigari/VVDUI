@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Accordion from "../components/accordion";
 import Code from "../components/code";
-
+import { COMPONENTS } from "../constants";
 type Props = {};
 
 function AccordionPage({}: Props) {
@@ -26,7 +26,7 @@ function AccordionPage({}: Props) {
     <div className="text-text-color max-w-6xl w-full flex flex-col justify-center font-normal text-md space-y-6 p-4">
       <div className="text-3xl font-semibold">Accordion</div>
       <div className="text-sm">
-        An accordion is a compact UI element that expands and collapses sections
+        An accordion expands and collapses sections
         of content, providing a space-efficient way to display information in a
         structured manner.
       </div>
@@ -43,7 +43,7 @@ function AccordionPage({}: Props) {
         </div>
       </div>
       {/* using utils get code function, keep below */}
-      <Code code={} language="js" />
+      <Code code={COMPONENTS.accordion} language="js" />
     </div>
   );
 }

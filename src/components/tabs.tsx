@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 type Props = {
-  tabsArray: { key: string; content: ReactNode }[];
+  tabsArray: { key: string; content: ReactNode; label: string }[];
   activeTab: string;
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
 };
@@ -27,7 +27,7 @@ export default function Tabs({ tabsArray, activeTab, setActiveTab }: Props) {
                 activeTab === tab.key && "bg-primary"
               }`}
             >
-              {tab.content}
+              {tab.label}
             </button>
           );
         })}

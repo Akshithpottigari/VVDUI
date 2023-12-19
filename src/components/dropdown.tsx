@@ -1,7 +1,13 @@
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
-export default function Dropdown({ items }: { items: string[] }) {
+export default function Dropdown({
+  items,
+  name,
+}: {
+  items: string[];
+  name: string;
+}) {
   const [isActiveDropdown, setIsActiveDropdown] = useState(false);
 
   return (
@@ -15,7 +21,7 @@ export default function Dropdown({ items }: { items: string[] }) {
         className="flex w-[200px] cursor-pointer items-center rounded-md border border-border-color bg-primary px-7 py-3 font-bold  hover:shadow-none duration-500 hover:bg-primary/60"
       >
         <div className="mx-auto flex items-center">
-          Dropdown
+          {name}
           <ChevronDown
             style={{
               transform: `rotate(${isActiveDropdown ? "180deg" : "0"})`,
@@ -38,7 +44,7 @@ export default function Dropdown({ items }: { items: string[] }) {
           return (
             <a
               key={index}
-              className="block w-full border border-border-color bg-primary px-7 py-3 first:rounded-t-[5px] last:rounded-b-[5px] hover:bg-primary/60 duration-500"
+              className="block cursor-pointer w-full border border-border-color bg-primary px-7 py-3 first:rounded-t-[5px] last:rounded-b-[5px] hover:bg-primary/60 duration-500"
             >
               {item}
             </a>

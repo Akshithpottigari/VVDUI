@@ -22,6 +22,7 @@ function AppLayout({}: Props) {
     { name: "Alert", link: ROUTE_PATHS.ALERT },
     { name: "Avatar", link: ROUTE_PATHS.AVATAR },
     { name: "Badge", link: ROUTE_PATHS.BADGE },
+    { name: "Button", link: ROUTE_PATHS.BUTTON },
     { name: "Card", link: ROUTE_PATHS.CARD },
     { name: "Checkbox", link: ROUTE_PATHS.CHECKBOX },
     { name: "Dialog", link: ROUTE_PATHS.DIALOG },
